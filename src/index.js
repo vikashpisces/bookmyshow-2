@@ -24,6 +24,8 @@ app.get('/', (req, res) => {
 
 app.use('/user', require('./routes/userRoutes'));
 app.use('/theatres', require('./routes/theatreRoutes'))
+app.use('/cities', require('./routes/cityRoutes'))
+app.use('/shows', require('./routes/movieRoutes'))
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

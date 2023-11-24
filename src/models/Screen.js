@@ -11,10 +11,6 @@ const Screen = (sequelize, DataTypes) => {
     columns: {
       type: DataTypes.INTEGER,
       allowNull: false
-    },
-    theatre_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false
     }
   })
 };

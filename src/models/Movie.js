@@ -14,7 +14,6 @@ const Movie = (sequelize, DataTypes) => {
     },
     supported_subtitles: {
       type: DataTypes.STRING,
-      allowNull: false
     }
   })
 }
