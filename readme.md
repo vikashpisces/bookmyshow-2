@@ -5,6 +5,14 @@
 **Table of Contents** 
 
 - [Overview](#overview)
+  - [API Endpoints](#api-endpoints)
+- [Installation](#installation)
+  - [Clone this repository using command](#clone-this-repository-using-command)
+  - [Install required dependencies using command:](#install-required-dependencies-using-command)
+  - [Audit installed dependencies using below command (fix the dependencies if any vulnerabilities found)](#audit-installed-dependencies-using-below-command-fix-the-dependencies-if-any-vulnerabilities-found)
+- [Usage](#usage)
+  - [Start the server using command:](#start-the-server-using-command)
+- [Reference Links](#reference-links)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
