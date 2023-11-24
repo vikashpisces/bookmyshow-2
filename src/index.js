@@ -23,9 +23,10 @@ app.get('/', (req, res) => {
 
 
 app.use('/user', require('./routes/userRoutes'));
-app.use('/theatres', require('./routes/theatreRoutes'))
-app.use('/cities', require('./routes/cityRoutes'))
-app.use('/shows', require('./routes/movieRoutes'))
+app.use('/theatres',verifyToken, require('./routes/theatreRoutes'))
+app.use('/cities', verifyToken, require('./routes/cityRoutes'))
+app.use('/shows', verifyToken, require('./routes/movieRoutes'))
+app.use('/bookings', verifyToken, require('./routes/bookingRoutes'))
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

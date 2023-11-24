@@ -21,5 +21,8 @@ module.exports = {
   SHOWS: {
     successResponse: 'Successfully fetched all shows',
     noData: 'There are no shows running in the theatre on given date'
+  },
+  BOOKING: {
+    successResponse: 'Booking is successful'
   }
 }

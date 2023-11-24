@@ -11,6 +11,7 @@ models.Screen = require('./Screen')(sequelize, DataTypes, Sequelize);
 models.ShowSchedule = require('./ShowSchedule')(sequelize, DataTypes, Sequelize);
 models.City = require('./City')(sequelize, DataTypes, Sequelize);
 models.PinCode = require('./PinCode')(sequelize, DataTypes, Sequelize);
+models.Booking = require('./Booking')(sequelize, DataTypes, Sequelize);
 
 // Relationship between Theatre & Screen - 1:N
 models.Theatre.hasMany(models.Screen)
@@ -32,5 +33,9 @@ models.ShowSchedule.belongsTo(models.Movie)
 // Relationship between City & PinCode - 1:N
 models.City.hasMany(models.PinCode)
 models.PinCode.belongsTo(models.City)
+
+// Relationship of Booking
+models.Booking.belongsTo(models.User)
+models.Booking.belongsTo(models.ShowSchedule)
 
 module.exports = models;
