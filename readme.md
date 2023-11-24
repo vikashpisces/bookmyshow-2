@@ -11,7 +11,9 @@
   - [Install required dependencies using command:](#install-required-dependencies-using-command)
   - [Audit installed dependencies using below command (fix the dependencies if any vulnerabilities found)](#audit-installed-dependencies-using-below-command-fix-the-dependencies-if-any-vulnerabilities-found)
 - [Usage](#usage)
+  - [Create a file .env with the following content (Modify the configuration as per your requirement)](#create-a-file-env-with-the-following-content-modify-the-configuration-as-per-your-requirement)
   - [Start the server using command:](#start-the-server-using-command)
+  - [Run command to populate the database](#run-command-to-populate-the-database)
 - [Reference Links](#reference-links)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -32,7 +34,14 @@ You have noticed that even after indexing the columns the API speed isn’t unde
 Create an API to book seats for you and you friend for a given theatre and a show.
 
 ### API Endpoints
-
+| Method | Endpoint                                 | Description                                 |
+|--------|------------------------------------------|---------------------------------------------|
+| POST   | /user/register                           | Register a new user                         |
+| POST   | /user/login                              | Login a registered user                     |
+| GET    | /theatres?city=:city                     | Get list of theatres by city                |
+| GET    | /cities?state=:state                     | Get list of cities by state                 |
+| GET    | /shows?theatre=:theatre&date=:date       | Get list of shows in a theatre and on given date |
+| POST   | /bookings                                | Book seats for a given theatre and a show        |
 
 ## Installation
 
@@ -41,15 +50,29 @@ Create an API to book seats for you and you friend for a given theatre and a sho
   git clone <repository_url> 
 
 ### Install required dependencies using command:
-  npm install 
+```npm install ```
 
 ### Audit installed dependencies using below command (fix the dependencies if any vulnerabilities found)
-  npm audit 
+```npm audit ```
 
 ## Usage
 
+### Create a file .env with the following content (Modify the configuration as per your requirement)
+```
+  PORT=1234
+  MYSQL_HOST=MYSQL_HOST
+  MYSQL_PORT=MYSQL_PORT
+  MYSQL_USER=MYSQL_USER
+  MYSQL_PWD=MYSQL_PWD
+  HASH_SECRET=HASH_SECRET
+  JWT_SECRET=JWT_SECRET
+```
+
 ### Start the server using command:
-  npm run start 
+```npm run start:dev```
+
+### Run command to populate the database
+```npm run seed```
 
 ## Reference Links
 - [doctoc](https://www.npmjs.com/package/doctoc)

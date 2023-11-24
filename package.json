@@ -4,7 +4,8 @@
   "description": "A side project to develop API to support movie ticketing platform like bookmyshow",
   "main": "index.js",
   "scripts": {
-    "start:dev": "node src/index.js"
+    "start:dev": "node src/index.js",
+    "seed": "node -r dotenv/config src/helpers/seed.js"
   },
   "keywords": [],
   "author": "",
