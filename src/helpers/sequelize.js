@@ -9,6 +9,6 @@ module.exports.authenticate = async function () {
 }
 
 module.exports.syncModelsToDB = async function () {
-  await this.sync()
+  await this.sync({ force: true})
   console.log('All Models are synced with database successfully.');
 };
